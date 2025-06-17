@@ -2,6 +2,9 @@
 Einstiegspunkt: startet Price-Loop und verarbeitet Opportunities
 """
 import asyncio, logging, os
+from dotenv import load_dotenv
+load_dotenv()
+
 from scheduler import JobScheduler
 from price_scanner import PriceScanner
 from spread_analyzer import is_profitable
@@ -17,6 +20,8 @@ logging.basicConfig(level=logging.INFO,
 
 MODE = os.getenv("MODE", "dryrun")
 MIN_PROFIT = float(os.getenv("MIN_PROFIT_USD", "5"))
+
+print("DEBUG DEX_API (main.py):", os.getenv("DEXSCREENER_API"))
 
 async def process_tick(tick):
     buy_price = tick["price"]          # pretend same dex both sides for demo

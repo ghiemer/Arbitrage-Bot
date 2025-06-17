@@ -3,9 +3,13 @@ Fetches DEX prices (DexScreener REST + later WS); provides async generator of ti
 """
 from __future__ import annotations
 import aiohttp, asyncio, logging, os, yaml
+from dotenv import load_dotenv
 from typing import AsyncGenerator, Dict, List
 
+load_dotenv()
+
 DEX_API = os.getenv("DEXSCREENER_API", "https://api.dexscreener.io/latest/dex/pairs")
+print("DEBUG DEX_API:", DEX_API)
 with open("config/pairs.yaml") as f:
     PAIRS: List[Dict] = yaml.safe_load(f)
 
