@@ -1,0 +1,18 @@
+bsc:
+  chain_id: 56
+  native: BNB
+  rpc:
+    - https://bsc-mainnet.quicknode.com/${QUICKNODE_KEY}/
+    - https://rpc.ankr.com/bsc
+arbitrum:
+  chain_id: 42161
+  native: ETH
+  rpc:
+    - https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}
+    - https://arb1.arbitrum.io/rpc
+polygon:
+  chain_id: 137
+  native: MATIC
+  rpc:
+    - https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}
+    - https://rpc.ankr.com/polygon

@@ -1,0 +1,8 @@
+- symbol: WBNB/USDT
+  chains: [bsc]
+  min_spread_pct: 0.5     # %
+  max_slippage_pct: 0.3
+- symbol: ETH/USDC
+  chains: [arbitrum, polygon]
+  min_spread_pct: 0.4
+  max_slippage_pct: 0.25
